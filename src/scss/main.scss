@@ -1,0 +1,103 @@
+@import 'variables';
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
+         url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2') format('woff2'),
+         url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.body {
+    margin: 0;
+    padding: 1.25rem;
+    background-color: $color-off-white;
+    color: $color-dark-blue;
+    font-family: 'Satoshi', sans-serif;
+
+    a {
+        color: $color-accent;
+        text-decoration: none;
+
+        &:hover {
+            color: lighten($color-accent, 50%);
+        }
+
+        &:visited {
+            color: darken($color-accent, 25%);
+        }
+    }
+}
+
+.body > a {
+    color: $color-accent;
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    text-align: center;
+    min-height: 8rem;
+    margin: 0;
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    border: 1px solid $color-gray;
+    background-color: $color-light-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    min-height: 40vh;
+}
+
+.main > div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $color-gray;
+}
+
+.content {
+    flex: 3;
+    background-color: $color-light-gray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content > p {
+    margin: 0 2rem 2rem 2rem;
+    text-align: justify;
+    text-indent: 1.5em;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: $color-light-gray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sidebar > p {
+    margin: 0 1rem;
+    text-align: justify;
+}
+
+

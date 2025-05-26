@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url("../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2") format("woff2"), url("../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url("../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2") format("woff2"), url("../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.body {
+  margin: 0;
+  padding: 1.25rem;
+  background-color: #e6e6ec;
+  color: #1a1a24;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.body a {
+  color: #d96c75;
+  text-decoration: none;
+}
+
+.body a:hover {
+  color: white;
+}
+
+.body a:visited {
+  color: #9d2932;
+}
+
+.body > a {
+  color: #d96c75;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-title {
+  text-align: center;
+  min-height: 8rem;
+  margin: 0;
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  border: 1px solid #a6a6bf;
+  background-color: #c1c1d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 40vh;
+}
+
+.main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #a6a6bf;
+}
+
+.content {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background-color: #c1c1d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.content > p {
+  margin: 0 2rem 2rem 2rem;
+  text-align: justify;
+  text-indent: 1.5em;
+}
+
+.sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #c1c1d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.sidebar > p {
+  margin: 0 1rem;
+  text-align: justify;
+}
+/*# sourceMappingURL=main.css.map */
