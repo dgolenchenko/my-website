@@ -1,21 +1,23 @@
 :root {
   --color-background: #0e0e12;
-  --color-surface: #1a1a24;
-  --color-text: #e6e6ec;
-  --color-accent: #c1c1d2;
-  --color-border: #535373;
-  --color-gray: #a6a6bf;
-  --font-family: 'Spectral', serif;
+  --color-surface:    #1a1a24;
+  --color-text:       #e6e6ec;
+  --color-link-hover: #6cd9a6;
+  --color-accent:     #c1c1d2;
+  --color-border:     #535373;
+  --color-gray:       #a6a6bf;
+  --font-family:      'Spectral', serif;
 }
 
-[data-theme="light"] {
-  --color-background: #f0f0f0;
-  --color-surface: #ffffff;
-  --color-text: #333333;
-  --color-accent: #0033cc;
-  --color-border: #ff9900;
-  --color-gray: #999999;
-  --font-family: 'SciFi', monospace;
+[data-theme='light'] {
+  --color-background: #e6e6ec;
+  --color-surface:    #c1c1d2;
+  --color-text:       #0e0e12;
+  --color-link-hover: #e6e6ec;
+  --color-accent:     #535373;
+  --color-border:     #535373;
+  --color-gray:       #333346;
+  --font-family:      'Spectral', serif;
 }
 
 @font-face {
@@ -46,27 +48,6 @@
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'SciFi';
-  src: url("../assets/SciFi/scifi2k2.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SciFi';
-  src: url("../assets/SciFi/scifi2ki.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'SciFi';
-  src: url("../assets/SciFi/scifi2ku.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
 .body {
   margin: 0;
   padding: 1.25rem;
@@ -81,7 +62,7 @@
 }
 
 .body a:hover {
-  color: var(--color-gray);
+  color: var(--color-link-hover);
   cursor: pointer;
 }
 
@@ -244,5 +225,111 @@
 .theme-switcher:hover {
   background-color: var(--color-accent);
   color: var(--color-background);
+}
+
+.gr_custom_container_1750546163 {
+  background-color: transparent;
+  color: var(--color-text);
+  width: 90%;
+  max-width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gr_custom_container_1750546163 > a {
+  color: var(--color-text);
+}
+
+.gr_custom_container_1750546163 > a:hover {
+  color: var(--color-link-hover);
+}
+
+.gr_custom_header_1750546163 {
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+  margin-bottom: 0.3125rem;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.gr_custom_each_container_1750546163 {
+  width: 100%;
+  clear: both;
+  margin-bottom: 0.625rem;
+  overflow: auto;
+  padding-bottom: 0.25rem;
+}
+
+.gr_custom_book_container_1750546163 {
+  overflow: hidden;
+  height: auto;
+  max-height: 10rem;
+  float: right;
+  margin-left: 0.25rem;
+  width: 30%;
+  max-width: 6rem;
+  min-width: 4rem;
+}
+
+.gr_custom_book_container_1750546163 img {
+  width: 100%;
+  height: auto;
+  max-height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gr_custom_author_1750546163 {
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+
+.gr_custom_tags_1750546163 {
+  font-size: 0.8em;
+  color: var(--color-gray);
+}
+
+.gr_custom_rating_1750546163 {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .gr_custom_container_1750546163 {
+    padding: 0.5rem 0.25rem;
+  }
+  .gr_custom_book_container_1750546163 {
+    width: 25%;
+    max-width: 5rem;
+    min-width: 3rem;
+  }
+  .gr_custom_header_1750546163 {
+    font-size: 1.1em;
+  }
+  .gr_custom_author_1750546163,
+  .gr_custom_tags_1750546163 {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 480px) {
+  .gr_custom_book_container_1750546163 {
+    width: 20%;
+    max-width: 4rem;
+    min-width: 2.5rem;
+  }
+  .gr_custom_header_1750546163 {
+    font-size: 1em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,42 +1,33 @@
-// Dark theme colors
 $color-dark-background:  #0e0e12;
 $color-dark-blue:        #1a1a24;
 $color-dark-slate:       #333346;
 $color-dark-steel:       #535373;
-$color-dark-accent:      #d96c75;
+$color-dark-accent:      #6cd9a6;
 $color-dark-gray:        #a6a6bf;
 $color-dark-light-gray:  #c1c1d2;
 $color-dark-off-white:   #e6e6ec;
-
-// Light theme colors
-$color-light-background:   #f0f0f0;
-$color-light-header:       #ffffff;
-$color-light-border:       #cccccc;
-$color-light-orange:       #ff9900;
-$color-light-orange-dark:  #cc7a00;
-$color-light-shadow-gray:  #999999;
-$color-light-blue-link:    #0033cc;
-$color-light-text:         #333333;
-
 
 // CSS Custom Properties for theme switching
 :root {
     // Dark theme (default)
     --color-background: #{$color-dark-background};
-    --color-surface: #{$color-dark-blue};
-    --color-text: #{$color-dark-off-white};
-    --color-accent: #{$color-dark-light-gray};
-    --color-border: #{$color-dark-steel};
-    --color-gray: #{$color-dark-gray};
-    --font-family: 'Spectral', serif;
+    --color-surface:    #{$color-dark-blue};
+    --color-text:       #{$color-dark-off-white};
+    --color-link-hover: #{$color-dark-accent};
+    --color-accent:     #{$color-dark-light-gray};
+    --color-border:     #{$color-dark-steel};
+    --color-gray:       #{$color-dark-gray};
+    --font-family:      'Spectral', serif;
 }
 
-[data-theme="light"] {
-    --color-background: #{$color-light-background};
-    --color-surface: #{$color-light-header};
-    --color-text: #{$color-light-text};
-    --color-accent: #{$color-light-blue-link};
-    --color-border: #{$color-light-orange};
-    --color-gray: #{$color-light-shadow-gray};
-    --font-family: 'SciFi', monospace;
+[data-theme='light'] {
+    // Light theme
+    --color-background: #{$color-dark-off-white};
+    --color-surface:    #{$color-dark-light-gray};
+    --color-text:       #{$color-dark-background};
+    --color-link-hover: #{$color-dark-off-white};
+    --color-accent:     #{$color-dark-steel};
+    --color-border:     #{$color-dark-steel};
+    --color-gray:       #{$color-dark-slate};
+    --font-family:      'Spectral', serif;
 }
