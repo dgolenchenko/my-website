@@ -1,17 +1,50 @@
 @import 'variables';
 
 @font-face {
-    font-family: 'Satoshi';
-    src: url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
-         url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff');
+    font-family: 'Spectral';
+    src: url('../assets/Spectral/Spectral-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Satoshi';
-    src: url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2') format('woff2'),
-         url('../assets/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff') format('woff');
+    font-family: 'Spectral';
+    src: url('../assets/Spectral/Spectral-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('../assets/Spectral/Spectral-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('../assets/Spectral/Spectral-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SciFi';
+    src: url('../assets/SciFi/scifi2k2.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SciFi';
+    src: url('../assets/SciFi/scifi2ki.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SciFi';
+    src: url('../assets/SciFi/scifi2ku.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -19,26 +52,23 @@
 .body {
     margin: 0;
     padding: 1.25rem;
-    background-color: $color-off-white;
-    color: $color-dark-blue;
-    font-family: 'Satoshi', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-family);
 
     a {
-        color: $color-accent;
+        color: var(--color-accent);
         text-decoration: none;
 
         &:hover {
-            color: lighten($color-accent, 50%);
-        }
-
-        &:visited {
-            color: darken($color-accent, 25%);
+            color: var(--color-gray);
+            cursor: pointer;
         }
     }
 }
 
 .body > a {
-    color: $color-accent;
+    color: var(--color-gray);
 }
 
 .container {
@@ -53,51 +83,103 @@
     min-height: 8rem;
     margin: 0;
     margin-top: 4rem;
-    font-size: 2.5rem;
-    border: 1px solid $color-gray;
-    background-color: $color-light-gray;
+    font-size: 2rem;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-surface);
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page-title > h1 {
+    margin: 2rem 0 0 0;
+    font-size: 3rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     justify-content: center;
 }
 
 .main {
     display: flex;
     flex-direction: row;
-    min-height: 40vh;
+    min-height: 50vh;
 }
 
 .main > div {
     display: flex;
     flex-direction: column;
-    border: 1px solid $color-gray;
+    border-left: 2px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
 }
 
 .content {
     flex: 3;
-    background-color: $color-light-gray;
+    background-color: var(--color-surface);
     display: flex;
     flex-direction: column;
     text-align: center;
+
 }
 
 .content > p {
-    margin: 0 2rem 2rem 2rem;
+    margin: 2rem 2rem 0rem 2rem;
     text-align: justify;
     text-indent: 1.5em;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 .sidebar {
     flex: 1;
-    background-color: $color-light-gray;
+    background-color: var(--color-surface);
+    border-right: 2px solid var(--color-border);
     display: flex;
     flex-direction: column;
-    text-align: center;
+
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 1rem 1rem;
+    }
+}
+
+.divider {
+    align-self: center;
+    padding-bottom: 0.5rem;
 }
 
 .sidebar > p {
-    margin: 0 1rem;
+    margin: 0 1rem 0 1rem;
+    margin-right: 1.5rem;
     text-align: justify;
+}
+
+// Theme switcher button
+.theme-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--color-accent);
+        color: var(--color-background);
+    }
 }
 
 
